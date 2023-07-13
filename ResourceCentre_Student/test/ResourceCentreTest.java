@@ -264,7 +264,7 @@ public class ResourceCentreTest {
 		// Test case 2: Return an item that is not loaned out
 		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
 		assertFalse("Test that the return fails.", isReturned);
-				//push to github
+				
 		// Test case 3: Return an item that does not exist 
 		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
 		assertFalse("Test the the return of CB0013 fails.", isReturned);	
