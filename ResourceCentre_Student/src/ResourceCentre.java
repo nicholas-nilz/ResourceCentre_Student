@@ -150,23 +150,81 @@ public class ResourceCentre {
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (chromebookList.get(i).getIsAvailable()) {
 				output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+=======
+
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (chromebookList.get(i).getIsAvailable()) {
+				output += String.format("%-10s %-30s %-10s %-10s %-20d\n", chromebookList.get(i).getAssetTag(),
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+					chromebookList.get(i).getDescription(), 
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (chromebookList.get(i).getIsAvailable()) {
+				output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+<<<<<<< HEAD
 						chromebookList.get(i).getDescription(),
 						ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
 						chromebookList.get(i).getDueDate(), chromebookList.get(i).getOs());
+=======
+						chromebookList.get(i).getDescription(), 
+=======
+		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (chromebookList.get(i).getIsAvailable()) {
+				output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+					chromebookList.get(i).getDescription(), 
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
+					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 			}
 		}
 		return output;
 	}
 
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OS");
+		 output += retrieveAllChromebook(chromebookList);	
+=======
+		// write your code here
+<<<<<<< HEAD
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OS");
+		output += retrieveAllChromebook(chromebookList);
+=======
+<<<<<<< HEAD
+		ResourceCentre.setHeader("Chromebook LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OPERATING SYSTEM");
+		 output +=  retrieveAllChromebook(chromebookList);
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		ResourceCentre.setHeader("CHROMEBOOK LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION", "AVAILABLE",
 				"DUE DATE", "Os");
 		output += retrieveAllChromebook(chromebookList);
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		System.out.println(output);
 	}
 
@@ -195,22 +253,80 @@ public class ResourceCentre {
 
 		camcorderList.add(cc);
 	}
+<<<<<<< HEAD
 
 	public static Chromebook inputChromebook() {
+=======
+	
+	public static Chromebook inputChromebook() {	
+<<<<<<< HEAD
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter OS > ");
+<<<<<<< HEAD
+		
+		Chromebook cb= new Chromebook(tag, description, os);
+		
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+=======
+<<<<<<< HEAD
+		Chromebook cb =null;
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		String Os = Helper.readString("Enter Os > ");
 
+<<<<<<< HEAD
 		Chromebook cb = new Chromebook(tag, description, Os);
+=======
+		 cb= new Chromebook(tag, description, OS);
+=======
+		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter OS > ");
+		
+		Chromebook cb= new Chromebook(tag, description, os);
+		
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+
+		Chromebook cb= new Chromebook(tag, description, os);
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		return cb;
 
 	}
 
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+		for(int i = 0; i < chromebookList.size(); i++) {
+			Chromebook item = chromebookList.get(i);
+=======
+		Chromebook item;
+		for(int i = 0; i < chromebookList.size(); i++) {
+			item = chromebookList.get(i);
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		Chromebook item;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			item = chromebookList.get(i);
+<<<<<<< HEAD
 			if (item.getAssetTag().equalsIgnoreCase(cb.getAssetTag()))
+=======
+=======
+		// write your code here
+		for(int i = 0; i < chromebookList.size(); i++) {
+			Chromebook item = chromebookList.get(i);
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+			if (item.getAssetTag().equalsIgnoreCase(cb.getAssetTag()) )
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 				return;
 		}
 		if ((cb.getAssetTag().isEmpty()) || (cb.getDescription().isEmpty())) {
@@ -255,7 +371,14 @@ public class ResourceCentre {
 	}
 
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+		// write your code here
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		boolean isLoaned = false;
 
 		if (tag.isEmpty() || dueDate.isEmpty())
@@ -273,8 +396,38 @@ public class ResourceCentre {
 		}
 		return isLoaned;
 	}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {	
+		ResourceCentre.viewAllChromebook(chromebookList);
+		String tag = Helper.readString("Enter asset tag > ");
+		String due = Helper.readString("Enter due date > ");
+		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+		if (isLoaned == false) {
+			System.out.println("Invalid asset tag");
+		} else {
+			System.out.println("Chromebook " + tag + " loaned out");
+		}
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		String tag = Helper.readString("Enter asset tag > ");
+		String due = Helper.readString("Enter due date > ");
+		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+		if (isLoaned == false) {
+			System.out.println("Invalid asset tag");
+		} else {
+			System.out.println("Chromebook " + tag + " loaned out");
+		}	
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
@@ -284,6 +437,11 @@ public class ResourceCentre {
 		} else {
 			System.out.println("Chromebook " + tag + " loaned out");
 		}
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 	}
 
 	// ================================= Option 4 Return an item (CRUD -
@@ -321,6 +479,17 @@ public class ResourceCentre {
 
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList, String tag) {
 		boolean isReturned = false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+=======
+		// write your code here
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		if (tag.isEmpty())
 			return false;
 
@@ -337,6 +506,27 @@ public class ResourceCentre {
 	}
 
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		ResourceCentre.viewAllChromebook(chromebookList);
+		String tag = Helper.readString("Enter asset tag > ");
+		Boolean isReturned = doReturnChromebook(chromebookList, tag);
+		
+		if (isReturned == false) {
+			System.out.println("Invalid asset tag");
+		} else {
+			System.out.println("Chhromebook " + tag + " returned");
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+=======
+<<<<<<< HEAD
+=======
+		// write your code here
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		Boolean isReturned = doReturnChromebook(chromebookList, tag);
@@ -345,6 +535,22 @@ public class ResourceCentre {
 			System.out.println("Invalid asset tag");
 		} else {
 			System.out.println("Chromebook " + tag + " returned");
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
 		}
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
 }
+=======
+	
+		
+		
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
+}
+	
+
+
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Student.git
