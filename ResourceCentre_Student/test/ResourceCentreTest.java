@@ -134,7 +134,7 @@ public class ResourceCentreTest {
 		// Test if Item list is not null and empty
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		assertEquals("Test that the Chromebook arraylist is empty.", 0, chromebookList.size());
-		// Attempt to retrieve the Camcoders 
+		// Attempt to retrieve the Chromebook
 		String allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
 		String testOutput = "";
 		// Test if the output is empty
@@ -147,8 +147,8 @@ public class ResourceCentreTest {
 		assertEquals("Test that Chromebook arraylist size is 2.", 2, chromebookList.size());
 		// Attempt to retrieve the Camcoders 
 		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
-		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac Os");
-		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0012","SAMSUNG Chromebook 4+", "Yes", "","Win 10" );
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012","SAMSUNG Chromebook 4+", "Yes", "","Win 10" );
 		// Test that the details are displayed correctly
 		assertEquals("Test that the display is correct.", testOutput, allChromebook);
 
@@ -159,8 +159,8 @@ public class ResourceCentreTest {
 		assertFalse("Test that the last item in the arraylist is not available", chromebookList.get(2).getIsAvailable());
 		// Attempt to retrieve the Camcoders 
 		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
-		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac Os");
-		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB0012","SAMSUNG Chromebook 4+", "Yes", "","Win 10" );
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012","SAMSUNG Chromebook 4+", "Yes", "","Win 10" );
 		// Test that the details are displayed correctly
 		assertEquals("Test that the display is correct.", testOutput, allChromebook);
 		
